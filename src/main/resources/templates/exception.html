@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Application Error</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .error-box {
+            background: white;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="error-box">
+    <h1>Something went wrong 😓</h1>
+    <p><b>Type:</b> <span th:text="${exceptionType}"></span></p>
+    <p><b>Message:</b> <span th:text="${errorMessage}"></span></p>
+    <a href="/">Go Home</a>
+</div>
+
+</body>
+</html>
